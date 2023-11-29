@@ -11,12 +11,19 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  void getFromAPI() async {
+    //ToDo todo = ToDo(id: '1', task: '2', isDone: false);
+    String data = await ToDo.getToDoFromAPI();
+    print(data);
+  }
+
   List<ToDo> todoList = ToDo.todoList();
   List<ToDo> _foundToDo = [];
   final _todoController = TextEditingController();
 
   @override
   void initState() {
+    getFromAPI();
     _foundToDo = todoList;
     super.initState();
   }
