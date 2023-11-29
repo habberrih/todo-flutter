@@ -4,7 +4,9 @@ import '../utils/colors.dart';
 
 class ToDoItem extends StatelessWidget {
   final ToDo todo;
+  // ignore: prefer_typing_uninitialized_variables
   final onToDoChange;
+  // ignore: prefer_typing_uninitialized_variables
   final onDeleteItem;
 
   const ToDoItem({
